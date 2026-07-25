@@ -1,0 +1,23 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-background: #0a0a0a;
+  --color-foreground: #f5f5f5;
+  --color-accent: #d4ff00;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
