@@ -6,6 +6,7 @@ const links = [
   { id: 'services', ua: 'Послуги', en: 'Services' },
   { id: 'pricing', ua: 'Ціни', en: 'Pricing' },
   { id: 'gallery', ua: 'Галерея', en: 'Gallery' },
+  { id: 'contact', ua: 'Контакти', en: 'Contact' },
 ]
 
 export function Nav() {

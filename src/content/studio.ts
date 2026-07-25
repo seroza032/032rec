@@ -18,9 +18,17 @@ export const studio = {
     ua: 'Адреса уточнюється',
     en: 'Address TBD',
   } satisfies Localized<string>,
+  landmark: {
+    ua: 'Орієнтир уточнюється',
+    en: 'Landmark TBD',
+  } satisfies Localized<string>,
   hours: {
     ua: 'Щодня 10:00–22:00',
     en: 'Daily 10:00–22:00',
+  } satisfies Localized<string>,
+  bookingMessage: {
+    ua: 'Привіт! Хочу записатися в 032rec.',
+    en: 'Hi! I want to book a session at 032rec.',
   } satisfies Localized<string>,
   phone: '+380000000000',
   telegram: 'https://t.me/rec032',
