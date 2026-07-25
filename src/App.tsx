@@ -1,12 +1,13 @@
 import { LangProvider } from './hooks/useLang'
+import { Layout } from './components/Layout'
 import { Nav } from './components/Nav'
 
 function App() {
   return (
     <LangProvider>
-      <div className="min-h-screen bg-background text-foreground">
+      <Layout>
         <Nav />
-      </div>
+      </Layout>
     </LangProvider>
   )
 }
