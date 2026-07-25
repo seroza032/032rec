@@ -15,23 +15,19 @@ export const studio = {
     en: "Vocal recording, mixing, mastering and studio rental — for rappers, singers and producers who don't want to wait.",
   } satisfies Localized<string>,
   address: {
-    ua: 'Адреса уточнюється',
-    en: 'Address TBD',
-  } satisfies Localized<string>,
-  landmark: {
-    ua: 'Орієнтир уточнюється',
-    en: 'Landmark TBD',
+    ua: 'вул. Лісна, 1, Львів, 81135',
+    en: '1 Lisna St, Lviv, 81135',
   } satisfies Localized<string>,
   hours: {
-    ua: 'Щодня 10:00–22:00',
-    en: 'Daily 10:00–22:00',
+    ua: 'Цілодобово',
+    en: '24/7',
   } satisfies Localized<string>,
   bookingMessage: {
     ua: 'Привіт! Хочу записатися в 032rec.',
     en: 'Hi! I want to book a session at 032rec.',
   } satisfies Localized<string>,
-  phone: '+380000000000',
+  phone: '+380960320033',
   telegram: 'https://t.me/rec032',
   instagram: 'https://www.instagram.com/032rec',
-  mapsUrl: 'https://maps.google.com',
+  mapsUrl: 'https://maps.app.goo.gl/gPYiaKTmDEXzi3y29?g_st=ic',
 }

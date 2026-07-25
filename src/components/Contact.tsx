@@ -3,6 +3,7 @@ import { studio } from '../content/studio'
 import { getTelegramBookingUrl } from '../lib/telegram'
 import { SectionTitle } from './ui/SectionTitle'
 import { Button } from './ui/Button'
+import { Icon } from './ui/Icon'
 
 function InfoRow({ label, value }: { label: string; value: string }) {
   return (
@@ -41,18 +42,15 @@ export function Contact() {
               value={lang === 'ua' ? studio.address.ua : studio.address.en}
             />
             <InfoRow
-              label={lang === 'ua' ? 'Орієнтир' : 'Landmark'}
-              value={lang === 'ua' ? studio.landmark.ua : studio.landmark.en}
-            />
-            <InfoRow
               label={lang === 'ua' ? 'Години роботи' : 'Hours'}
               value={lang === 'ua' ? studio.hours.ua : studio.hours.en}
             />
             <a
               href={`tel:${studio.phone}`}
-              className="inline-block font-mono text-lg text-foreground transition-colors hover:text-accent"
+              aria-label={lang === 'ua' ? 'Подзвонити' : 'Call'}
+              className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/20 text-foreground transition-colors hover:border-accent hover:text-accent"
             >
-              {studio.phone}
+              <Icon name="call" className="text-xl" />
             </a>
           </div>
 
