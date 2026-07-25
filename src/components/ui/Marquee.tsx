@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react'
+import { Children, type ReactNode } from 'react'
 
 interface MarqueeProps {
   children: ReactNode
@@ -7,15 +7,25 @@ interface MarqueeProps {
 }
 
 export function Marquee({ children, speed = 20, className = '' }: MarqueeProps) {
+  const items = Children.toArray(children)
+
   return (
     <div className={`group relative overflow-hidden ${className}`}>
       <div
-        className="flex w-max animate-marquee gap-8 group-hover:[animation-play-state:paused] motion-reduce:animate-none"
+        className="flex w-max animate-marquee group-hover:[animation-play-state:paused] motion-reduce:animate-none"
         style={{ animationDuration: `${speed}s` }}
       >
-        <div className="flex shrink-0 gap-8">{children}</div>
-        <div className="flex shrink-0 gap-8" aria-hidden="true">
-          {children}
+        {items.map((child, i) => (
+          <div key={`a-${i}`} className="mr-8 shrink-0">
+            {child}
+          </div>
+        ))}
+        <div aria-hidden="true" className="contents">
+          {items.map((child, i) => (
+            <div key={`b-${i}`} className="mr-8 shrink-0">
+              {child}
+            </div>
+          ))}
         </div>
       </div>
     </div>
