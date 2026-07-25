@@ -14,7 +14,7 @@ export function Nav() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 flex items-center justify-between border-b border-white/5 bg-background/70 px-6 py-4 backdrop-blur-sm">
-      <a href="#hero" className="font-display text-lg font-bold tracking-tight text-foreground">
+      <a href="#hero" className="text-lg font-bold tracking-tight text-foreground">
         {studio.name}
       </a>
       <nav className="hidden items-center gap-6 sm:flex">
