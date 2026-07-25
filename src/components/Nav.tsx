@@ -5,6 +5,7 @@ import { LangSwitch } from './LangSwitch'
 const links = [
   { id: 'services', ua: 'Послуги', en: 'Services' },
   { id: 'pricing', ua: 'Ціни', en: 'Pricing' },
+  { id: 'gallery', ua: 'Галерея', en: 'Gallery' },
 ]
 
 export function Nav() {
