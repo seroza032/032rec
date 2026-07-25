@@ -29,5 +29,6 @@ export const studio = {
   phone: '+380960320033',
   telegram: 'https://t.me/rec032',
   instagram: 'https://www.instagram.com/032rec',
+  tiktok: 'https://www.tiktok.com/@032rec',
   mapsUrl: 'https://maps.app.goo.gl/gPYiaKTmDEXzi3y29?g_st=ic',
 }

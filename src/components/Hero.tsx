@@ -60,6 +60,9 @@ export function Hero() {
         <Button href={studio.instagram} target="_blank" rel="noreferrer" variant="ghost">
           Instagram
         </Button>
+        <Button href={studio.tiktok} target="_blank" rel="noreferrer" variant="ghost">
+          TikTok
+        </Button>
       </div>
 
       <div className="absolute inset-x-0 bottom-0">

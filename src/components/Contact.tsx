@@ -33,6 +33,9 @@ export function Contact() {
           <Button href={studio.instagram} target="_blank" rel="noreferrer" variant="ghost">
             Instagram Direct
           </Button>
+          <Button href={studio.tiktok} target="_blank" rel="noreferrer" variant="ghost">
+            TikTok
+          </Button>
         </div>
 
         <div className="grid gap-8 sm:grid-cols-2">
