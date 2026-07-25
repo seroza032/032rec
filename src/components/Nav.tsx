@@ -4,7 +4,7 @@ import { LangSwitch } from './LangSwitch'
 
 const links = [
   { id: 'services', ua: 'Послуги', en: 'Services' },
-  { id: 'pricing', ua: 'Ціни', en: 'Pricing' },
+  { id: 'discounts', ua: 'Знижки', en: 'Discounts' },
   { id: 'gallery', ua: 'Галерея', en: 'Gallery' },
   { id: 'contact', ua: 'Контакти', en: 'Contact' },
 ]

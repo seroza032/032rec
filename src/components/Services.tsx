@@ -46,7 +46,7 @@ export function Services() {
       <div className="mx-auto max-w-5xl space-y-12">
         <SectionTitle
           eyebrow={lang === 'ua' ? 'Що ми робимо' : 'What we do'}
-          title={lang === 'ua' ? 'Послуги' : 'Services'}
+          title={lang === 'ua' ? 'Послуги та ціни' : 'Services & Pricing'}
         />
         <div ref={ref} className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, i) => (

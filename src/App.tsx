@@ -3,7 +3,7 @@ import { Layout } from './components/Layout'
 import { Nav } from './components/Nav'
 import { Hero } from './components/Hero'
 import { Services } from './components/Services'
-import { Pricing } from './components/Pricing'
+import { Discounts } from './components/Discounts'
 import { Gallery } from './components/Gallery'
 import { Contact } from './components/Contact'
 import { FloatingTelegramButton } from './components/ui/FloatingTelegramButton'
@@ -15,7 +15,7 @@ function App() {
         <Nav />
         <Hero />
         <Services />
-        <Pricing />
+        <Discounts />
         <Gallery />
         <Contact />
         <FloatingTelegramButton />
