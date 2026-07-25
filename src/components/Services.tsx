@@ -18,10 +18,12 @@ function ServiceCard({ service }: { service: Service }) {
       style={{ rotateX, rotateY, transformPerspective: 800 }}
       className="flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition-colors hover:border-accent/60"
     >
-      <Icon name={service.icon} className="text-3xl text-accent" />
-      <h3 className="mt-4 text-xl font-bold uppercase text-foreground">
-        {lang === 'ua' ? service.title.ua : service.title.en}
-      </h3>
+      <div className="flex items-center gap-3">
+        <Icon name={service.icon} className="text-2xl text-accent" />
+        <h3 className="text-xl font-bold uppercase text-foreground">
+          {lang === 'ua' ? service.title.ua : service.title.en}
+        </h3>
+      </div>
       <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
         {lang === 'ua' ? service.description.ua : service.description.en}
       </p>
