@@ -13,7 +13,7 @@ function GalleryTile({ photo, index }: { photo: GalleryPhoto; index: number }) {
         <>
           <img
             src={photo.src}
-            alt=""
+            alt={lang === 'ua' ? photo.caption.ua : photo.caption.en}
             loading="lazy"
             decoding="async"
             className="absolute inset-0 h-full w-full object-cover"
@@ -21,14 +21,9 @@ function GalleryTile({ photo, index }: { photo: GalleryPhoto; index: number }) {
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
         </>
       )}
-      <div className="relative">
-        <span className="font-mono text-xs uppercase tracking-wide text-muted">
-          {String(index + 1).padStart(2, '0')}
-        </span>
-        <p className="mt-2 text-xl font-bold uppercase text-foreground">
-          {lang === 'ua' ? photo.caption.ua : photo.caption.en}
-        </p>
-      </div>
+      <span className="relative font-mono text-xs uppercase tracking-wide text-muted">
+        {String(index + 1).padStart(2, '0')}
+      </span>
     </>
   )
 }
@@ -70,7 +65,13 @@ export function Gallery() {
     'relative flex h-[420px] w-[300px] shrink-0 flex-col justify-end overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.01] p-6 text-left transition-colors hover:border-accent/60 sm:h-[520px] sm:w-[380px]'
 
   const cards = galleryPhotos.map((photo, i) => (
-    <button key={photo.id} type="button" onClick={() => setActiveIndex(i)} className={cardClass}>
+    <button
+      key={photo.id}
+      type="button"
+      onClick={() => setActiveIndex(i)}
+      aria-label={lang === 'ua' ? photo.caption.ua : photo.caption.en}
+      className={cardClass}
+    >
       <GalleryTile photo={photo} index={i} />
     </button>
   ))

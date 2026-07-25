@@ -11,10 +11,8 @@ export interface GalleryPhoto {
 }
 
 export const galleryPhotos: GalleryPhoto[] = [
-  { id: 'booth', caption: { ua: 'Вокальна кабіна', en: 'Vocal booth' } },
   { id: 'control-room', src: controlRoomPhoto, caption: { ua: 'Апаратна', en: 'Control room' } },
   { id: 'mixing', src: mixingPhoto, caption: { ua: 'Зведення', en: 'Mixing session' } },
-  { id: 'lounge', caption: { ua: 'Зона відпочинку', en: 'Lounge' } },
   { id: 'gear', src: gearPhoto, caption: { ua: 'Обладнання', en: 'Gear' } },
   { id: 'session', src: sessionPhoto, caption: { ua: 'Наживо в студії', en: 'Live in the studio' } },
 ]
