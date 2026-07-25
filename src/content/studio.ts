@@ -6,6 +6,14 @@ export const studio = {
     ua: 'Звукозаписна студія',
     en: 'Recording studio',
   } satisfies Localized<string>,
+  heroTitle: {
+    ua: 'ТВІЙ ЗВУК. НАША СТУДІЯ.',
+    en: 'YOUR SOUND. OUR STUDIO.',
+  } satisfies Localized<string>,
+  heroSubtitle: {
+    ua: 'Запис вокалу, зведення, мастеринг і оренда — для реперів, співаків і продюсерів, які не хочуть чекати.',
+    en: "Vocal recording, mixing, mastering and studio rental — for rappers, singers and producers who don't want to wait.",
+  } satisfies Localized<string>,
   address: {
     ua: 'Адреса уточнюється',
     en: 'Address TBD',

@@ -3,7 +3,7 @@ import type { Localized } from './types'
 export interface PricingTier {
   id: string
   title: Localized<string>
-  price: string
+  price: Localized<string>
   unit: Localized<string>
   popular?: boolean
 }
@@ -12,14 +12,14 @@ export const pricing: PricingTier[] = [
   {
     id: 'hourly',
     title: { ua: 'Погодинно', en: 'Hourly' },
-    price: '—',
-    unit: { ua: 'грн/год', en: 'UAH/hour' },
+    price: { ua: 'Ціна уточнюється', en: 'Price TBD' },
+    unit: { ua: 'за годину', en: 'per hour' },
   },
   {
     id: 'package',
     title: { ua: 'Пакет 10 год', en: '10-hour package' },
-    price: '—',
-    unit: { ua: 'грн', en: 'UAH' },
+    price: { ua: 'Ціна уточнюється', en: 'Price TBD' },
+    unit: { ua: 'вигідніше погодинного', en: 'better value than hourly' },
     popular: true,
   },
 ]
