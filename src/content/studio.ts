@@ -1,7 +1,7 @@
 import type { Localized } from './types'
 
 export const studio = {
-  name: 'Studio',
+  name: '032rec',
   tagline: {
     ua: 'Звукозаписна студія',
     en: 'Recording studio',
@@ -23,7 +23,7 @@ export const studio = {
     en: 'Daily 10:00–22:00',
   } satisfies Localized<string>,
   phone: '+380000000000',
-  telegram: 'https://t.me/studio_handle',
-  instagram: 'https://instagram.com/studio_handle',
+  telegram: 'https://t.me/rec032',
+  instagram: 'https://www.instagram.com/032rec',
   mapsUrl: 'https://maps.google.com',
 }
