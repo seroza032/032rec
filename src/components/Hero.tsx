@@ -2,7 +2,6 @@ import { motion, useReducedMotion } from 'framer-motion'
 import { useLang } from '../hooks/useLang'
 import { studio } from '../content/studio'
 import { Button } from './ui/Button'
-import { Tag } from './ui/Tag'
 import { Marquee } from './ui/Marquee'
 
 function AnimatedHeading({ text }: { text: string }) {
@@ -48,8 +47,6 @@ export function Hero() {
       id="hero"
       className="relative flex min-h-screen flex-col items-start justify-center gap-8 overflow-hidden px-6 pb-20 pt-32"
     >
-      <Tag pulse>{lang === 'ua' ? 'Приймаємо записи' : 'Booking open'}</Tag>
-
       <AnimatedHeading text={lang === 'ua' ? studio.heroTitle.ua : studio.heroTitle.en} />
 
       <p className="max-w-xl text-lg text-muted">
@@ -68,7 +65,7 @@ export function Hero() {
       <div className="absolute inset-x-0 bottom-0">
         <Marquee className="border-t border-white/10 py-4" speed={18}>
           {Array.from({ length: 6 }).map((_, i) => (
-            <span key={i} className="text-xl font-bold uppercase text-foreground/40">
+            <span key={i} className="text-xl font-bold text-foreground/40">
               {studio.name} &middot;
             </span>
           ))}

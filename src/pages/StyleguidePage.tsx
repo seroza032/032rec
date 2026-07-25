@@ -93,7 +93,7 @@ function StyleguideContent() {
         <h2 className="font-mono text-xs uppercase tracking-[0.2em] text-muted">Marquee</h2>
         <Marquee className="border-y border-white/10 py-4">
           {Array.from({ length: 4 }).map((_, i) => (
-            <span key={i} className="font-display text-2xl font-bold uppercase text-foreground/60">
+            <span key={i} className="font-display text-2xl font-bold text-foreground/60">
               {studio.name} &middot;
             </span>
           ))}
