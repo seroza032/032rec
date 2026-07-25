@@ -4,6 +4,7 @@ import { useScrollReveal } from '../hooks/useScrollReveal'
 import { useTilt } from '../hooks/useTilt'
 import { services, type Service } from '../content/services'
 import { SectionTitle } from './ui/SectionTitle'
+import { Icon } from './ui/Icon'
 
 function ServiceCard({ service }: { service: Service }) {
   const { lang } = useLang()
@@ -15,14 +16,23 @@ function ServiceCard({ service }: { service: Service }) {
       onPointerMove={handlePointerMove}
       onPointerLeave={handlePointerLeave}
       style={{ rotateX, rotateY, transformPerspective: 800 }}
-      className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition-colors hover:border-accent/60"
+      className="flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition-colors hover:border-accent/60"
     >
-      <h3 className="text-xl font-bold uppercase text-foreground">
+      <Icon name={service.icon} className="text-3xl text-accent" />
+      <h3 className="mt-4 text-xl font-bold uppercase text-foreground">
         {lang === 'ua' ? service.title.ua : service.title.en}
       </h3>
-      <p className="mt-3 text-sm leading-relaxed text-muted">
+      <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
         {lang === 'ua' ? service.description.ua : service.description.en}
       </p>
+      <div className="mt-5 border-t border-white/10 pt-4">
+        <p className="font-mono text-lg font-bold text-foreground">
+          {lang === 'ua' ? service.price.ua : service.price.en}
+        </p>
+        {service.note && (
+          <p className="mt-1 font-mono text-xs text-muted">{lang === 'ua' ? service.note.ua : service.note.en}</p>
+        )}
+      </div>
     </motion.div>
   )
 }
