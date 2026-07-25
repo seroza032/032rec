@@ -11,8 +11,8 @@ export const studio = {
     en: 'YOUR SOUND. OUR STUDIO.',
   } satisfies Localized<string>,
   heroSubtitle: {
-    ua: 'Запис вокалу, зведення, мастеринг і оренда — для реперів, співаків і продюсерів, які не хочуть чекати.',
-    en: "Vocal recording, mixing, mastering and studio rental — for rappers, singers and producers who don't want to wait.",
+    ua: 'Запис вокалу, зведення та мастеринг — для реперів, співаків і продюсерів, які не хочуть чекати.',
+    en: "Vocal recording, mixing, and mastering — for rappers, singers and producers who don't want to wait.",
   } satisfies Localized<string>,
   address: {
     ua: 'вул. Лісна, 1, Львів, 81135',

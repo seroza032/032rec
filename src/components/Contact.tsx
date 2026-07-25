@@ -17,6 +17,7 @@ function InfoRow({ label, value }: { label: string; value: string }) {
 export function Contact() {
   const { lang } = useLang()
   const telegramUrl = getTelegramBookingUrl(lang)
+  const mapEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent(studio.address.ua)}&output=embed`
 
   return (
     <section id="contact" className="px-6 py-24">
@@ -61,17 +62,20 @@ export function Contact() {
             href={studio.mapsUrl}
             target="_blank"
             rel="noreferrer"
-            className="group relative flex h-64 flex-col items-center justify-center gap-3 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] transition-colors hover:border-accent/60"
-            style={{
-              backgroundImage:
-                'linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px)',
-              backgroundSize: '32px 32px',
-            }}
+            aria-label={lang === 'ua' ? 'Прокласти маршрут' : 'Get directions'}
+            className="group relative flex h-64 flex-col justify-end overflow-hidden rounded-2xl border border-white/10 transition-colors hover:border-accent/60"
           >
-            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-accent text-accent">
-              ●
-            </span>
-            <span className="font-mono text-xs uppercase tracking-wide text-muted transition-colors group-hover:text-accent">
+            <iframe
+              src={mapEmbedSrc}
+              title="map"
+              loading="lazy"
+              tabIndex={-1}
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 h-full w-full border-0"
+              style={{ filter: 'grayscale(1) invert(0.92) contrast(0.9)' }}
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/90 via-background/10 to-transparent" />
+            <span className="relative m-4 inline-flex w-fit items-center gap-2 rounded-full border border-accent bg-background/80 px-3 py-1 font-mono text-xs uppercase tracking-wide text-accent">
               {lang === 'ua' ? 'Прокласти маршрут →' : 'Get directions →'}
             </span>
           </a>
