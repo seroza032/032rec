@@ -22,7 +22,7 @@ export function Nav() {
           <a
             key={link.id}
             href={`#${link.id}`}
-            className="font-mono text-xs uppercase tracking-wide text-foreground/70 transition hover:text-accent"
+            className="font-sans text-xs uppercase tracking-wide text-foreground/70 transition hover:text-accent"
           >
             {lang === 'ua' ? link.ua : link.en}
           </a>
